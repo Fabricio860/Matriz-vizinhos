@@ -7,11 +7,8 @@ namespace Exercicio_matriz_vizinhos
         static void Main(string[] args)
         {
             int[,] mat;
-
-            int left, right, dow, up;
-
+          
             Random number = new Random();
-
 
             Console.Write("Qual a quantidades de linha da matriz? ");
             int m = int.Parse(Console.ReadLine());
@@ -27,26 +24,18 @@ namespace Exercicio_matriz_vizinhos
                     int numberInt = number.Next(0, 30);
                     Console.Write("Digite um número: ");
                     mat[i, j] = numberInt;
-
-
                 }
-
             }
             Console.Clear();
-
-
-
 
             for (int i = 0; i < m; i++)
             {
                 for (int j = 0; j < n; j++)
                 {
                     Console.Write(mat[i, j] + "   ");
-
                 }
                 Console.WriteLine();
             }
-
 
             Console.Write("Digite um number  0 a 30 para idendificar os vizinhos deles: ");
             int pesq = int.Parse(Console.ReadLine());
@@ -67,10 +56,7 @@ namespace Exercicio_matriz_vizinhos
                         if (i < m-1)
                             Console.WriteLine("Dow: "+ mat[i+1,j]);
                     }
-
-
                 }
-
             }
         }
     }
